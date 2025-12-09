@@ -49,7 +49,7 @@ namespace TomadaStore.ProductAPI.Repositories
         {
             try
             {
-                var product =  await _mongoCollection.Find(p => p.Id == new ObjectId(id)).FirstOrDefaultAsync();
+                var product =  await _mongoCollection.Find(p => p.Id == new ObjectId(id).ToString()).FirstOrDefaultAsync();
 
                 ProductResponseDTO newProduct = new()
                 {

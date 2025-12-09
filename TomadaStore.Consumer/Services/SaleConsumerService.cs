@@ -29,7 +29,7 @@ namespace TomadaStore.SaleConsumer.Services
                 using var channel = await connection.CreateChannelAsync();
 
                 await channel.QueueDeclareAsync(
-                    queue: "sales_queue",
+                    queue: "sales_approved_queue",
                     durable: false,
                     exclusive: false,
                     autoDelete: false,
@@ -46,12 +46,14 @@ namespace TomadaStore.SaleConsumer.Services
                     _logger.LogInformation($"Received message: {message}");
 
                       var sale = JsonSerializer.Deserialize<Sale>(message);
+
                       await _saleConsumerRepository.SaveSaleAsync(sale);
+
                       _logger.LogInformation($"Sale saved with Id: {sale.Id}");
                 };
 
                 await channel.BasicConsumeAsync(
-                    queue: "sales_queue",
+                    queue: "sales_approved_queue",
                     autoAck: true,
                     consumer: consumer
                 );

@@ -59,7 +59,8 @@ namespace TomadaStore.SaleAPI.Repositories
                 (
                     customer,
                     products,
-                    productDTO.Price
+                    productDTO.Price,
+                    false
                 ));
             }
             catch (Exception ex)
@@ -90,7 +91,7 @@ namespace TomadaStore.SaleAPI.Repositories
                 )).ToList();
 
                 var totalPrice = products.Sum(p => p.Price);
-                var sale = new Sale(customer, products, totalPrice);
+                var sale = new Sale(customer, products, totalPrice, false);
 
 
                 await _mongoCollection.InsertOneAsync(sale);

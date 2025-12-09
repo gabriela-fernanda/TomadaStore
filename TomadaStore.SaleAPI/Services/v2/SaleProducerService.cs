@@ -76,7 +76,7 @@ namespace TomadaStore.SaleAPI.Services.v2
                 }
 
                 var totalPrice = productDTOs.Sum(p => p.Price);
-                var sale = new Sale(newCustomer, productDTOs, totalPrice);
+                var sale = new Sale(newCustomer, productDTOs, totalPrice, false);
 
                 return sale;
             }

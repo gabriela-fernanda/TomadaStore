@@ -18,14 +18,16 @@ namespace TomadaStore.Models.Models
         public List<Product> Products { get;  set; }
         public DateTime SaleDate { get;  set; }
         public decimal TotalPrice { get;  set; }
+        public bool? Aproved { get; set; }
 
-        public Sale(Customer customer, List<Product> products, decimal totalPrice)
+        public Sale(Customer customer, List<Product> products, decimal totalPrice, bool? aproved)
         {
             Id = ObjectId.GenerateNewId().ToString();
             Customer = customer;
             Products = products;
             SaleDate = DateTime.UtcNow;
             TotalPrice = totalPrice;
+            Aproved = aproved;
         }
         public Sale() { }
     }

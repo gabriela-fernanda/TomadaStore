@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,9 @@ namespace TomadaStore.Models.Models
 {
     public class Product
     {
-        public ObjectId Id { get;  set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get;  set; }
         public string Name { get;  set; }
         public string Description { get;  set; }
         public decimal Price { get;  set; }
@@ -31,7 +34,7 @@ namespace TomadaStore.Models.Models
                         decimal price,
                         Category category)
         {
-            Id = ObjectId.Parse(id);
+            Id = ObjectId.Parse(id).ToString();
             Name = name;
             Description = description;
             Price = price;
