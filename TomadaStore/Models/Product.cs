@@ -9,11 +9,11 @@ namespace TomadaStore.Models.Models
 {
     public class Product
     {
-        public ObjectId Id { get; private set; }
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-        public decimal Price { get; private set; }
-        public Category Category { get; private set; }
+        public ObjectId Id { get;  set; }
+        public string Name { get;  set; }
+        public string Description { get;  set; }
+        public decimal Price { get;  set; }
+        public Category Category { get;  set; }
 
         public Product() { }
 

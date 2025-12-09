@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomadaStore.Models", "TomadaStore\TomadaStore.Models.csproj", "{99DD48EB-F2FB-47C7-B1E4-BB5F2AFDD7CE}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomadaStore.ProductAPI", "TomadaStore.ProductAPI\TomadaStore.ProductAPI.csproj", "{815367F6-FF78-4A31-8045-B830F5763413}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomadaStore.SaleAPI", "TomadaStore.SaleAPI\TomadaStore.SaleAPI.csproj", "{7F8336C8-6F14-4C07-B5AD-7FBC55076617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomadaStore.SaleConsumer", "TomadaStore.Consumer\TomadaStore.SaleConsumer.csproj", "{430787D6-8575-46FC-9670-58C104B4BFAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7F8336C8-6F14-4C07-B5AD-7FBC55076617}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F8336C8-6F14-4C07-B5AD-7FBC55076617}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F8336C8-6F14-4C07-B5AD-7FBC55076617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430787D6-8575-46FC-9670-58C104B4BFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430787D6-8575-46FC-9670-58C104B4BFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430787D6-8575-46FC-9670-58C104B4BFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430787D6-8575-46FC-9670-58C104B4BFAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

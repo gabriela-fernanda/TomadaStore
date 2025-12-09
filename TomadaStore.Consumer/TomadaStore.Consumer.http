@@ -1,0 +1,6 @@
+@TomadaStore.Consumer_HostAddress = http://localhost:5277
+
+GET {{TomadaStore.Consumer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

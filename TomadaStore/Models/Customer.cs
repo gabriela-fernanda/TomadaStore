@@ -2,12 +2,12 @@
 {
     public class Customer
     {
-        public int Id { get; private set; }
-        public string FirstName { get;  private set; }
-        public string LastName { get; private set; }
-        public string Email { get; private set; }
-        public string? PhoneNumber { get; private set; }
-        public bool Status { get; private set; }
+        public int Id { get;  set; }
+        public string FirstName { get;   set; }
+        public string LastName { get;  set; }
+        public string Email { get;  set; }
+        public string? PhoneNumber { get;  set; }
+        public bool Status { get;  set; }
 
         public Customer(string firstName, string lastName, string email)
         {
@@ -34,5 +34,7 @@
             Email = email;
             PhoneNumber = phoneNumber;
         }
+
+        public Customer() { }
     }
 }

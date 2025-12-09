@@ -71,7 +71,7 @@ namespace TomadaStore.SaleAPI.Services.v2
                 {
                     var product = await _httpClientProduct.GetFromJsonAsync<ProductResponseDTO>(
                     $"https://localhost:6001/api/v1/Product/{productId}");
-                    var newProduct = new Product(product.Name, product.Description, product.Price, new Category(product.Category.Name, product.Category.Description));
+                    var newProduct = new Product(product.Id, product.Name, product.Description, product.Price, new Category(product.Category.Name, product.Category.Description));
                     productDTOs.Add(newProduct);
                 }
 
